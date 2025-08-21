@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var closeBtn = document.querySelector(".close-btn");
   var toggleClass = "cart-expanded";
 
-  // Open
   if (trigger) {
     trigger.addEventListener("click", function (e) {
       e.preventDefault();
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Close
   if (closeBtn) {
     closeBtn.addEventListener("click", function (e) {
       e.preventDefault();
@@ -42,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	);
 		const summaryNumber1 = document.querySelector(".select-number");
 		const summaryNumber2 = document.querySelector(".select-number2");
+    const summaryNumber3 = document.querySelector(".select-number3");
 
 		let itemCount = 0;
 
@@ -52,6 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
       if (summaryNumber2) {
           summaryNumber2.textContent = `${itemCount} items`;
+      }
+      if (summaryNumber3) {
+        summaryNumber3.textContent = `${itemCount} items`;
       }
 		}
 
@@ -98,27 +100,25 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       e.stopPropagation();
 
-      // Clear any previous timer
+      // Timer
       clearTimeout(timerOpacity);
 
-      // Remove active classes
+      // Remove Active
       tabLinks.forEach((link) => link.classList.remove("active"));
       tabBodies.forEach((body) => {
         body.classList.remove("active");
         body.classList.remove("active-item");
       });
 
-      // Add active class to clicked tab
+      // Active Tabs
       this.classList.add("active");
 
-      // Get the target tab content element
       const targetId = this.getAttribute("href");
       const targetBody = document.querySelector(targetId);
 
       if (targetBody) {
         targetBody.classList.add("active");
 
-        // Add 'active-content' after slight delay for transition
         timerOpacity = setTimeout(() => {
           targetBody.classList.add("active-item");
         }, 50);
@@ -126,6 +126,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
