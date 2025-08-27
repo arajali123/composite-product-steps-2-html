@@ -725,6 +725,22 @@ START: Tabs Product CSS
   animation: anim-4 0.9s ease-in-out 0s;
 }
 
+.tabs-build-product-item:nth-child(5) {
+  animation: anim-5 0.3s ease-in-out 0s;
+}
+
+.tabs-build-product-item:nth-child(6) {
+  animation: anim-6 0.5s ease-in-out 0s;
+}
+
+.tabs-build-product-item:nth-child(7) {
+  animation: anim-7 0.7s ease-in-out 0s;
+}
+
+.tabs-build-product-item:nth-child(8) {
+  animation: anim-8 0.9s ease-in-out 0s;
+}
+
 .mobile-nav-toggler {
   display: none;
 }
@@ -1368,6 +1384,54 @@ START: Product Cart CSS
   0% {
     opacity: 0;
     transform: translateY(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-5 {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-6 {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-7 {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-8 {
+  0% {
+    opacity: 0;
+    transform: translateY(8rem);
   }
 
   100% {
