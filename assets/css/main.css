@@ -492,8 +492,8 @@ START: Tabs Product CSS
 .tabs-build-product-section {
   position: relative;
   padding-top: 150px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  padding-bottom: 160px;
+  overflow: hidden;
 }
 
 .tabs-build-product-main-wrapper .tabs-build-title {
@@ -576,7 +576,6 @@ START: Tabs Product CSS
   column-gap: 14px;
   row-gap: 40px;
   padding-top: 35px;
-  padding-bottom: 160px;
 }
 
 .tabs-build-product-item {
@@ -801,65 +800,6 @@ START: Tabs Product CSS
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2), 0px 16px 39px rgba(0, 0, 0, 0.1);
 }
 
-.tabs-bottom-build-review-wrap {
-  position: fixed;
-  width: 100%;
-  height: 100px;
-  left: 0;
-  bottom: 0;
-  background-color: #ffffff;
-  border-top: 2px solid #E5E5E5;
-  padding: 24px 0;
-  z-index: 9;
-}
-
-.tabs-build-product-main-wrapper .tabs-build-main-wrap.review-build-wrap {
-  padding-top: 64px;
-}
-
-.tabs-build-product-main-wrapper .tabs-build-main-wrap.review-build-wrap .tabs-build-product-wrap {
-  padding-bottom: 160px;
-}
-
-.tabs-bottom-build-review-wrap .review-content-box {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 25px;
-  row-gap: 20px;
-  max-width: 1450px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.tabs-bottom-build-review-wrap .review-content-box .build-bottom-cart .total-review {
-  display: block;
-  color: #303030;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
-}
-
-.tabs-bottom-build-review-wrap .review-content-box .build-bottom-price {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: 23px;
-  row-gap: 15px;
-}
-
-.tabs-bottom-build-review-wrap .review-content-box .build-bottom-price .review-price {
-  display: block;
-  color: #121212;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1;
-}
-
 .tabs-build-product-main-wrapper .cart-thumb-wrap {
   display: flex;
   align-items: center;
@@ -919,10 +859,6 @@ START: Tabs Product CSS
 }
 
 @media (max-width: 1199px) {
-  .tabs-build-product-wrap {
-    padding-bottom: 120px;
-  }
-
   .tabs-build-product-main-wrapper>ul {
     white-space: nowrap;
     overflow-x: auto;
@@ -943,6 +879,10 @@ START: Tabs Product CSS
 }
 
 @media (max-width: 991px) {
+  .tabs-build-product-section {
+    padding-bottom: 100px;
+  }
+
   .tabs-build-product-wrap {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -951,24 +891,20 @@ START: Tabs Product CSS
     padding: 12px 25px;
   }
 
-  .tabs-bottom-build-review-wrap {
-    height: 80px;
-    padding: 16px 0;
+  .cart-thumb-item {
+    width: 114px;
+    height: 120px;
   }
 }
 
 @media (max-width: 767px) {
   .tabs-build-product-section {
     padding-top: 130px;
+    padding-bottom: 54px;
   }
 
   .tabs-build-product-wrap {
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 60px;
-  }
-
-  .tabs-build-product-main-wrapper .tabs-build-main-wrap.review-build-wrap .tabs-build-product-wrap {
-    padding-bottom: 175px;
   }
 
   .build-product-cart-wrap {
@@ -1016,24 +952,20 @@ START: Tabs Product CSS
     margin-top: 20px;
   }
 
-  .tabs-bottom-build-review-wrap {
-    height: 80px;
-    padding: 16px 0;
-  }
-
   .primary-btn {
     padding: 13px 25px;
   }
-}
 
-@media (max-width: 575px) {
-  .tabs-bottom-build-review-wrap {
-    height: 118px;
-    padding: 16px 0;
-  }
-
-  .tabs-bottom-build-review-wrap .review-content-box {
-    flex-direction: column;
+  .tabs-build-product-main-wrapper .cart-thumb-wrap {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: inherit;
+    justify-content: start;
+    scrollbar-color: rgba(18, 18, 18, 0.2) rgba(18, 18, 18, 0.2);
+    scrollbar-width: thin;
   }
 }
 
