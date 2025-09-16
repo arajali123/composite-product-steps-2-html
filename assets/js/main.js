@@ -1,7 +1,7 @@
 // Mobile Menu Js
 document.addEventListener("DOMContentLoaded", function () {
   var trigger = document.querySelector(".canva-cart");
-  var closeBtn = document.querySelector(".close-btn");
+  var closeBtns = document.querySelectorAll(".close-btn");
   var toggleClass = "cart-expanded";
 
   if (trigger) {
@@ -11,10 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.body.classList.remove(toggleClass);
+  if (closeBtns.length > 0) {
+    closeBtns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.body.classList.remove(toggleClass);
+      });
     });
   }
 });
@@ -93,24 +95,15 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const tabLinks = document.querySelectorAll(".tabs-build-product-main-wrapper .tab-button");
   const tabBodies = document.querySelectorAll(".tabs-build-product-main-wrapper .tabs-build-main-wrap");
-  let timerOpacity;
 
   tabLinks.forEach((tabLink) => {
     tabLink.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
 
-      // Timer
-      clearTimeout(timerOpacity);
-
-      // Remove Active
       tabLinks.forEach((link) => link.classList.remove("active"));
-      tabBodies.forEach((body) => {
-        body.classList.remove("active");
-        body.classList.remove("active-item");
-      });
+      tabBodies.forEach((body) => body.classList.remove("active"));
 
-      // Active Tabs
       this.classList.add("active");
 
       const targetId = this.getAttribute("href");
@@ -118,14 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (targetBody) {
         targetBody.classList.add("active");
-
-        timerOpacity = setTimeout(() => {
-          targetBody.classList.add("active-item");
-        }, 50);
       }
     });
   });
 });
+
 
 
 

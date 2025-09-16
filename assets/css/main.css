@@ -359,15 +359,21 @@ ul {
 .secondary-btn {
   display: flex;
   justify-content: center;
+  align-items: center;
+  column-gap: 6px;
   font-size: 15px;
   color: #ffffff;
   background: #367EFF;
-  padding: 16px 40px;
+  padding: 16px 20px;
   border-radius: 40px;
   position: relative;
   line-height: 1;
   cursor: pointer;
   border: none;
+}
+
+.secondary-btn span {
+  display: flex;
 }
 
 /* Mobile CSS */
@@ -1170,26 +1176,61 @@ START: Product Cart CSS
 
 .build-bottom-wrap .cart-price-box .subtitle {
   display: block;
-  color: #303030;
-  font-weight: 400;
+  color: #121212;
+  font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 14px;
+  margin-bottom: 3px;
 }
 
 .build-bottom-wrap .cart-price-box .cart-price {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: #121212;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 1px;
   margin-bottom: 19px;
 }
 
+.build-bottom-wrap .cart-price-box .cart-price .discount {
+  position: relative;
+  color: rgba(18, 18, 18, 0.8);
+  font-weight: 400;
+}
+
+.build-bottom-wrap .cart-price-box .cart-price .discount::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: rgba(18, 18, 18, 0.8);
+}
+
+.build-bottom-wrap .cart-price-box .cart-price .save {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #27A553;
+  border-radius: 10px;
+  padding: 9px 10px;
+  line-height: 1;
+}
+
 .build-bottom-wrap .secondary-btn {
   width: 100%;
   margin-top: 29px;
+}
+
+.cart-next-prev-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* !END: Product Cart CSS *
