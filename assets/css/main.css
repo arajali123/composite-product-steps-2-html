@@ -868,6 +868,11 @@ START: Tabs Product CSS
 }
 
 .cart-thumb-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 130px;
   position: relative;
   border: 1px solid #E8E8E8;
   border-radius: 16px;
@@ -885,7 +890,7 @@ START: Tabs Product CSS
   width: 100%;
 }
 
-.cart-thumb-item .close-btn {
+.cart-thumb-item .thumb-close-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -899,7 +904,7 @@ START: Tabs Product CSS
   right: 6px;
 }
 
-.cart-thumb-item:hover .close-btn {
+.cart-thumb-item:hover .thumb-close-btn {
   transform: scale(1);
 }
 
