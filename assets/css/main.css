@@ -563,7 +563,6 @@ START: Tabs Product CSS
 
 .tabs-build-product-main-wrapper .tabs-build-main-wrap {
   display: none;
-  padding-top: 35px;
 }
 
 .tabs-build-product-main-wrapper div.active {
@@ -576,6 +575,7 @@ START: Tabs Product CSS
   justify-content: center;
   column-gap: 14px;
   row-gap: 40px;
+  padding-top: 35px;
   padding-bottom: 160px;
 }
 
@@ -864,12 +864,43 @@ START: Tabs Product CSS
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1450px;
+  gap: 10px;
+}
+
+.cart-thumb-item {
+  position: relative;
+  border: 1px solid #E8E8E8;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.cart-thumb-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-thumb-item a img {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+}
+
+.cart-thumb-item .close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background: #FF0000;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+  top: 6px;
+  right: 6px;
+}
+
+.cart-thumb-item:hover .close-btn {
+  transform: scale(1);
 }
 
 @media (max-width: 1399px) {
@@ -1087,23 +1118,6 @@ START: Product Cart CSS
   align-items: start;
   column-gap: 15px;
   row-gap: 10px;
-}
-
-.build-list-item .cart-images {
-  max-width: 50px;
-  width: 100%;
-}
-
-.build-list-item .cart-images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.build-list-item .cart-content {
-  max-width: 214px;
-  width: 100%;
 }
 
 .build-list-item .cart-content .cart-title {
